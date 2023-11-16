@@ -101,7 +101,7 @@
     } = options;
 
     const isMyMessage = options.username === getUserName();
-    const username = isMyMessage ? 'Вы' : options.username;
+    const username = isMyMessage ? 'Вы: ' : options.username + ': ';
 
     const messageClassName = isMyMessage ? 'chat-message chat-message_my': 'chat-message chat-message_user';
     const node = createElement('div', {
@@ -152,7 +152,7 @@
         messages,
         container
       });
-    }, 5000);
+    }, 3000);
   };
 
   const onload = callback => {
